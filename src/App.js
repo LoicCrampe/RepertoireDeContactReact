@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Liste from './components/Liste';
-import Contenu from './components/Contenu';
+import { Provider } from './context';
 
 class App extends Component {
 
   render () {
     return (
-      <div className="App">
-        <Header />
-        <div className="container">
-          <Liste />
+      <Provider>
+        <div className="App">
+          <Header />
+          <div className="container">
+            <Liste />
+          </div>
         </div>
-        <Contenu />
-      </div>
+      </Provider>
     );
   }
 }
